@@ -18,8 +18,9 @@
 }
 
 .form {
-  padding: 60px;  
+  padding: 60px;
   background-color: #FFF;
+  border-radius: 32px;
 }
 
 .form__fieldset {
@@ -59,7 +60,7 @@
   background: #F0F4F4;
   font-size: 16px;
   font-weight: 500;
-  line-height: 140%; 
+  line-height: 140%;
   border: 1px solid transparent;
 }
 
@@ -67,18 +68,19 @@
   background-color: #E4F0F0;
 }
 
-.radio__input:focus-visible + .radio__label {
-  border-color:  #D10014;
+.radio__input:focus-visible+.radio__label {
+  border-color: #D10014;
 }
 
-.radio__input:checked + .radio__label {
+.radio__input:checked+.radio__label {
   background: #222;
   color: #FFF;
 }
 
 .form__months {
   margin-bottom: 16px;
-
+  display: flex;
+  gap: 16px;
 }
 
 .form__btn-month {
@@ -89,17 +91,14 @@
 
 .form__btn-month_active {
   color: #D10014;
+  transform: scale(1.15);
 }
 
 .form__subtitle {
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
-  line-height: 140%; 
-}
-
-.form__btn-month {
-
+  line-height: 140%;
 }
 
 .form__input-wrapper {
@@ -108,31 +107,57 @@
 }
 
 .form__input {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #F0F4F4;
+  border: 1px solid transparent;
+  color: inherit;
+}
 
+.form__input:hover {
+  background-color: #F0F4F4;
+}
+
+.form__input:focus-visible {
+  border-color: #D0D0D0;
 }
 
 .form__info {
-
-}
-
-.form__info-data {
-
+  font-weight: 500;
+  line-height: 140%;
 }
 
 .form__btn-wrapper {
-
+  display: flex;
+  gap: 8px;
 }
 
 .form__btn {
-
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  border-radius: 50px;
+  background-color: #F0F4F4;
 }
 
 .form__btn_next {
   background-color: #D10014;
+  color: #FFF;
+}
+
+.form__btn_submit {
+  background-color: #D10014;
+  color: #FFF;
 }
 
 .form__btn:disabled {
-  color:#222;
+  color: #222;
   background: #F0F4F4;
   opacity: 0.4;
+  pointer-events: none;
 }

@@ -1,3 +1,55 @@
 .header {
-  background: #222
+  background: #222;
+  padding-top: 32px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header__logo {
+  width: 254px;
+}
+
+.header__link {
+  border: 1px solid transparent;
+  border-radius: 50px;
+  padding: 12px 20px;
+  background-color: #F0F4F4;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  outline: none;
+}
+
+.header__link:hover {
+  background-color: #E4F0F0;
+}
+
+.header__link:focus-visible {
+  border-color: #D10014;
+}
+
+
+@media (max-width: 900px) {
+  .header {
+    padding-top: 24px;
+  }
+
+  .header__logo {
+    width: 180px;
+  }
+}
+
+@media (max-width: 660px) {
+  .header {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
 }

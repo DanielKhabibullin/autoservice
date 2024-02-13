@@ -67,15 +67,6 @@ const allMonth = [
   'декабрь',
 ];
 
-/**
- * <p class="form__info form__info_type">Диагностика и&nbsp;ремонт двигателей</p>
-            <p class="form__info">
-              <time class="form__info-data" datetime="2024-03-02T14:00">
-                <span class="form__info-data-day">03.02</span>
-                <span class="form__info-data-time">14:00</span>
-              </time>
-            </p>
- */
 const showResultData = () => {
   const currentYear = new Date().getFullYear();
   const monthIndex = allMonth.findIndex((item) => item === month);
@@ -225,7 +216,6 @@ const handleInputForm = ({ currentTarget, target }) => {
   }
 
   if (currentStep === 2) {
-    console.log('currentStep: ', currentStep);
     const inputs = formFieldsetClient.querySelectorAll('.form__input');
     let allFilled = true;
 
@@ -301,7 +291,7 @@ const init = () => {
         throw new Error(`Ошибка при отправке данных: ${response.status}`);
       }
     } catch (error) {
-      console.error(`Ошибка при отправке запрос: ${error}`);
+      console.error(`Ошибка при отправке запроса: ${error}`);
     }
   });
 };
